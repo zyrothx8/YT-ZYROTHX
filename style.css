@@ -1,0 +1,158 @@
+/* ===========================
+   YT ZYROTHX
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:#fff;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background:#181818;
+    padding:25px;
+    text-align:center;
+    border-bottom:3px solid #ff0000;
+}
+
+header h1{
+    color:#ff0000;
+    font-size:40px;
+    margin-bottom:8px;
+}
+
+header p{
+    color:#9ca3af;
+    font-size:18px;
+}
+
+/* ===========================
+   VIDEOS
+=========================== */
+
+#videos{
+    max-width:1500px;
+    margin:auto;
+    padding:35px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* ===========================
+   VIDEO CARD
+=========================== */
+
+.video-card{
+    background:#1b1b1b;
+    border:2px solid #2b2b2b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.video-card:hover{
+    transform:translateY(-8px);
+    border-color:#3b82f6;
+    box-shadow:0 0 25px rgba(59,130,246,.45);
+}
+
+.video-card img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+}
+
+.video-card h2{
+    padding:18px;
+    color:#22c55e;
+    font-size:22px;
+}
+
+/* ===========================
+   WATCH BUTTON
+=========================== */
+
+.video-card a{
+    text-decoration:none;
+}
+
+.video-card button{
+    width:calc(100% - 30px);
+    margin:0 15px 15px;
+
+    background:#ff0000;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:15px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:.25s;
+}
+
+.video-card button:hover{
+    background:#cc0000;
+    transform:scale(1.03);
+}
+
+/* ===========================
+   SCROLL BAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#181818;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3b82f6;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#22c55e;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:1000px){
+    #videos{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:650px){
+    #videos{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+}
